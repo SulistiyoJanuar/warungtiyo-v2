@@ -1,24 +1,31 @@
 import React from "react";
-import blueberryHero from "../assets/blueberry-g703eeb50b_1280.png";
+import { motion } from "framer-motion";
+import { MdChevronRight, MdChevronLeft } from "react-icons/md";
+import HomeContainer from "./HomeContainer";
+import RowContainer from "./RowContainer";
 
 const MainContainer = () => {
   return (
-    <div className=" w-full p-4 bg-blue-200 h-[90vh] flex flex-col justify-between ">
-      <div className="container-p grid md:grid-cols-2">
-        <div className="flex flex-col justify-center md:items-start w-full items-center md:text-start text-center mt-12 md:mt-10 ">
-          <h1 class="md:text-5xl text-3xl font-bold text-black">
-            Indulge in Nature's <br /> Sweet Jewels
-          </h1>
-          <p class="text-base text-black font-light my-4">Up 30% off to your first order</p>
-          <div className="flex">
-            <input type="text" placeholder="Enter your email " className="py-2 px-4 md:px-10" />
-            <button className="bg-green-600 px-2 md:px-4 py-2 font-bold text-white text-base">Subscribe</button>
+    <div className="w-full h-auto flex flex-col items-center justify-center">
+      <HomeContainer />
+
+      <section className="w-full my-6">
+        <div className="w-full flex items-center justify-between ">
+          <p className="text-3xl font-semibold capitalize relative before:absolute before:rounded-lg before:content before:w-20 before:h-1 before:-bottom-3 before:left-0 before:bg-green-600 transition-all ease-in-out duration-100">
+            Product Terlaris
+          </p>
+
+          <div className="hidden md:flex gap-4 items-center">
+            <motion.div whileTap={{ scale: 0.75 }} className="w-8 h-8 rounded-lg bg-green-300 hover:bg-green-500 flex items-center justify-center transition-all ease-in-out duration-100">
+              <MdChevronLeft className="text-lg text-white" />
+            </motion.div>
+            <motion.div whileTap={{ scale: 0.75 }} className="w-8 h-8 rounded-lg bg-green-300 hover:bg-green-500 flex items-center justify-center transition-all ease-in-out duration-100">
+              <MdChevronRight className="text-lg text-white" />
+            </motion.div>
           </div>
         </div>
-        <div className="mt-9">
-          <img src={blueberryHero} alt="blueberry" className="w-full h-auto drop-shadow-md " />
-        </div>
-      </div>
+        <RowContainer flag={true}/>
+      </section>
     </div>
   );
 };

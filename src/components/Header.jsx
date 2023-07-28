@@ -46,7 +46,7 @@ const Header = () => {
   };
 
   return (
-    <header className="sticky z-50 w-screen bg-white p-3 px-4 md:p-4 md:px-16 shadow-md top-0 left-0 right-0">
+    <header className="fixed z-50 w-screen bg-white p-3 px-4 md:p-4 md:px-16 shadow-md top-0 left-0 right-0">
       {/* Desktop */}
       <div className="hidden md:flex w-full h-full justify-between">
         <Link to={"/"} className=" items-center flex">
@@ -58,7 +58,11 @@ const Header = () => {
         </Link>
 
         <ul className="flex items-center font-medium gap-8 ">
-          <li className="text-base text-black hover:text-green-600 duration-100 transition-all ease-out cursor-pointer">Home</li>
+          <Link to={"/"}>
+            <a href="#home">
+              <li className="text-base text-black hover:text-green-600 duration-100 transition-all ease-out cursor-pointer">Home</li>
+            </a>
+          </Link>
           <li className="text-base text-black hover:text-green-600 duration-100 transition-all ease-out cursor-pointer">Menu</li>
           <li className="text-base text-black hover:text-green-600 duration-100 transition-all ease-out cursor-pointer">About</li>
           <li className="text-base text-black hover:text-green-600 duration-100 transition-all ease-out cursor-pointer">Service</li>
@@ -73,7 +77,7 @@ const Header = () => {
           </div>
 
           <div className="relative">
-            <motion.img whileTap={{ scale: 0.6 }} src={user ? user.photoURL : Avatar} className="cursor-pointer w-4 min-w-[40px] h-4 min-h-[40px] drop-shadow-xl rounded-full" onClick={login} />
+            <motion.img whileTap={{ scale: 0.6 }} src={user ? user.photoURL : Avatar} className="cursor-pointer w-4 min-w-[40px] h-4 min-h-[40px] rounded-full" onClick={login} />
             {isMenu && (
               <motion.div initial={{ opacity: 0, scale: 0.6 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.6 }} className="w-40 bg-gray-50 shadow-xl rounded-lg flex flex-col absolute right-0 top-12">
                 {user && user.email === "sulistiyojanuarakbar@gmail.com" && (
@@ -111,7 +115,7 @@ const Header = () => {
           </div>
 
           <div className="relative">
-            <motion.img whileTap={{ scale: 0.6 }} src={user ? user.photoURL : Avatar} className="cursor-pointer w-4 min-w-[40px] h-4 min-h-[40px] drop-shadow-xl rounded-full" onClick={login} />
+            <motion.img whileTap={{ scale: 0.6 }} src={user ? user.photoURL : Avatar} className="cursor-pointer w-4 min-w-[40px] h-4 min-h-[40px]  rounded-full" onClick={login} />
             {isMenu && (
               <motion.div initial={{ opacity: 0, scale: 0.6 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.6 }} className="w-40 bg-gray-50 shadow-xl rounded-lg flex flex-col absolute right-0 top-12">
                 {user && user.email === "sulistiyojanuarakbar@gmail.com" && (
