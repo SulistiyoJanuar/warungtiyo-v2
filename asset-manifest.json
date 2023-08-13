@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/warungtiyo-v2/static/css/main.efdd8a41.css",
-    "main.js": "/warungtiyo-v2/static/js/main.621bf665.js",
+    "main.css": "/warungtiyo-v2/static/css/main.683be12d.css",
+    "main.js": "/warungtiyo-v2/static/js/main.1eea7168.js",
     "static/media/shoppingHero.jpg": "/warungtiyo-v2/static/media/shoppingHero.e5b78010a60a425dc29c.jpg",
     "static/media/logo.svg": "/warungtiyo-v2/static/media/logo.4c7035196bd30a046bb09c6a3dcc8947.svg",
+    "static/media/emptyCart.svg": "/warungtiyo-v2/static/media/emptyCart.71ad17e692d71caa77c6c9351f84756b.svg",
     "index.html": "/warungtiyo-v2/index.html",
-    "main.efdd8a41.css.map": "/warungtiyo-v2/static/css/main.efdd8a41.css.map",
-    "main.621bf665.js.map": "/warungtiyo-v2/static/js/main.621bf665.js.map"
+    "main.683be12d.css.map": "/warungtiyo-v2/static/css/main.683be12d.css.map",
+    "main.1eea7168.js.map": "/warungtiyo-v2/static/js/main.1eea7168.js.map"
   },
   "entrypoints": [
-    "static/css/main.efdd8a41.css",
-    "static/js/main.621bf665.js"
+    "static/css/main.683be12d.css",
+    "static/js/main.1eea7168.js"
   ]
 }
